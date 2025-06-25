@@ -6,8 +6,8 @@ dotenv.config();
 
 import express from 'express';
 import cors from 'cors';
-import blogRoutes from '../blog-generator-ai/routes/blogRoutes.js';
-import authRoutes from '../blog-generator-ai/routes/authRoutes.js';
+import blogRoutes from '../routes/blogRoutes.js';
+import authRoutes from '../routes/authRoutes.js';
 import audioRoutes from './routes/audioRoutes.js';
 import mongoose from 'mongoose';
 import { setupSwagger } from './swagger.js';
