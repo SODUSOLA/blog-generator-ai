@@ -25,10 +25,10 @@ async function uploadAudio() {
         folder: 'blog-audio',
         });
 
-        console.log('✅ Uploaded successfully!');
-        console.log('🔗 File URL:', result.secure_url);
+        console.log('Uploaded successfully!');
+        console.log('File URL:', result.secure_url);
     } catch (error) {
-        console.error('❌ Upload failed:', error.message);
+        console.error('Upload failed:', error.message);
     }
     }
 
