@@ -104,7 +104,7 @@
  - Login the user with route -> `POST /auth/login`
  - Use the Token for each user login from route -> `POST /auth/login` with format `BEARER <TOKEN>`
  - POST the YouTube video using route -> `POST /audio/upload`
- - POST the audioURL to the route -> `POST /blog/generate`
+ - POST the audioURL gotten from the upload message body to the route -> `POST /blog/generate`
    
 
   --- 
