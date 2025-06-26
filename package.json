@@ -149,14 +149,14 @@
     "yaml": "^2.8.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "echo 'No build needed'"
+},
   "keywords": [],
   "optionalDependencies": {
   "fsevents": "*"
   },
-  "start": "node app.js",
-  "dev": "nodemon app.js",
   "type": "module",
   "author": "Odusola Oluwasemilore",
   "license": "MIT",
