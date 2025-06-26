@@ -1,7 +1,7 @@
 import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import cloudinary from '../services/cloudinary.js'; // Only this!
+import cloudinary from '../services/cloudinary.js';
 import Audio from '../models/Audio.js';
 
 
@@ -35,9 +35,9 @@ export const downloadAndUploadAudio = async (youtubeUrl) => {
             folder: 'blog-audio'
             });
 
-            fs.unlinkSync(outputFile); // Clean up
+            fs.unlinkSync(outputFile);
 
-            // ✅ Save to DB
+            // Save to DB
             await Audio.create({
             audioUrl: result.secure_url
             });
