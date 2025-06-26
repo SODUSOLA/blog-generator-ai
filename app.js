@@ -16,8 +16,8 @@ import { setupSwagger } from './swagger.js';
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('✅ MongoDB connected'))
-    .catch(err => console.error('❌ Mongo error:', err));
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('Mongo error:', err));
 
 
 // Initialize Express app
@@ -43,5 +43,5 @@ app.get('/', (req, res) => {
 setupSwagger(app);
 
 // Start the server
-app.listen(PORT, () => console.log(`✅ Server running → http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running → http://localhost:${PORT}`));
 
