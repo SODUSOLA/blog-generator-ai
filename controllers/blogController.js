@@ -22,7 +22,7 @@ export const generateBlog = async (req, res) => {
     }
 
     try {
-        // Step 1: Submit audio to AssemblyAI
+        // Submit audio to AssemblyAI
         const transcriptResponse = await axios.post(
             'https://api.assemblyai.com/v2/transcript',
             { audio_url: audioUrl },
@@ -36,7 +36,7 @@ export const generateBlog = async (req, res) => {
 
         const transcriptId = transcriptResponse.data.id;
 
-        // Step 2: Poll for transcript
+        // Poll for transcript
         let transcriptText = '';
         let completed = false;
         let retries = 0;
@@ -65,7 +65,7 @@ export const generateBlog = async (req, res) => {
             return res.status(408).json({ message: 'Transcript unavailable' });
         }
 
-        // Step 3: Generate blog using Gemini
+        // Generate blog using Gemini
         const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: `Write a concise and professional blog post based on this transcript:\n\n${transcriptText}`,
@@ -76,7 +76,7 @@ export const generateBlog = async (req, res) => {
         const rawBlog = response.text;
         const blogHtml = marked(rawBlog);
 
-        // Step 4: Save to DB
+        // Save to DB
         const savedBlog = await Blog.create({
             user: req.user._id,
             audioUrl,
