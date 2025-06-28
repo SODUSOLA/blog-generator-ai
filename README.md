@@ -1,6 +1,6 @@
 ### Blog Generator AI
 
-###### Blog Generator  AI is a RESTful Node.js API that lets users convert YouTube videos into concise, professional blog articles. It uses `yt-dlp` to download audio, `Cloudinary` to host, `AssemblyAI` to transcribe speech, and Google's `Gemini AI` to write the blog.
+###### Blog Generator  AI is a RESTful Node.js API that lets users convert YouTube videos into concise, professional blog articles. It uses `yt-dlp` to download audio, `Cloudinary` to host the downloaded audio for `AssemblyAI` to transcribe speech, and Google's `Gemini AI` to write the blog.
 ------
 ### Live API
   - Swagger Docs: `https://blog-generator-ai.onrender.com/api-docs`
