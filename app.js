@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
     res.send('Hello from Blog Generator API!');
 });
 
-// Setup Swagger for API documentation
+// Swagger setup for API documentation
 setupSwagger(app);
 
 // Start the server

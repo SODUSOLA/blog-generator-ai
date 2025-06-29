@@ -36,7 +36,7 @@ export const downloadAndUploadAudio = async (youtubeUrl) => {
 
             fs.unlinkSync(outputFile);
 
-            // Save to DB
+            // Save audio to DB
             await Audio.create({
             audioUrl: result.secure_url
             });

@@ -44,7 +44,7 @@ const router = express.Router();
  *       500:
  *         description: Server error during processing
  */
-router.post('/upload', getCloudAudioUrl); // Upload audio from YouTube link
+router.post('/api/upload', getCloudAudioUrl); // Upload audio from YouTube link
 
 /**
  * @swagger
@@ -72,7 +72,7 @@ router.post('/upload', getCloudAudioUrl); // Upload audio from YouTube link
  *       500:
  *         description: Server error
  */
-router.get('/upload', getAllAudios); // Get all uploaded audios
+router.get('/api/upload', getAllAudios); // Get all uploaded audios
 
 /**
  * @swagger
@@ -96,7 +96,7 @@ router.get('/upload', getAllAudios); // Get all uploaded audios
  *         description: Server error
  * 
  */
-router.delete('/upload/:id', deleteAudio); // Delete audio by ID
+router.delete('/api/upload/:id', deleteAudio); // Delete audio by ID
 
 
 export default router;

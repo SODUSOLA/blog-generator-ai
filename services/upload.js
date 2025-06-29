@@ -15,7 +15,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
     });
 
-// Path to your local MP3 file
+// Path to local MP3 file
 const filePath = path.join(__dirname, 'An Apple a Day： Discover 10 Health Benefits That Will Amaze You! [vpDWkrU77ps].mp3');
 
 async function uploadAudio() {
