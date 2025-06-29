@@ -10,7 +10,6 @@ export const downloadAndUploadAudio = async (youtubeUrl) => {
         const outputDir = path.join('downloads');
         const outputFile = path.join(outputDir, 'audio.mp3');
 
-        // Ensure output directory exists
         if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir);
         }
